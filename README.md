@@ -1,18 +1,39 @@
 # DIY Clio Mk3 Raspberry Pi Head Unit
 
-DIY head unit for Clio MK3 enabling Android Auto, Apple Carplay, and other mods.
+![Emanuel](/assets/images/emanuel.svg)
 
-![Clio MK3 Head Unit](/assets/images/headunit.JPG)
+### DIY head unit for Clio MK3 enabling Android Auto, Apple Carplay, and other mods.
 
-I love my Clio 197 but it is lacking in some creature comforts that I have used to and dependant on, specifically navigation and a decent way to stream and control music. I really did not want to buy one of those big aftermarket touchsreen units and have always tried to keep all of the modifications on my car sort of OEM+.
+I love my Clio 197, aka [Emanuel the Clio](https://www.instagram.com/emanuel_the_clio/), but it is lacking in some creature comforts like navigation and a decent way to stream and control music. I really did not want to buy one of those big aftermarket touchsreen units and have always tried to keep all of the modifications on my car sort of OEM+.
 
-In this spirit, I decided to tackle this and repurpose the original TomTom navigation housing and update its internals with modern tech. Thus this project was born. A lot of people were interested in replicating it so I am putting together this guide for everyone to do the same and keep enjoying their Clios for longer!
+In this spirit, I decided to try and repurpose the original TomTom navigation housing and update its internals with modern components. Thus this project was born. A lot of people have shown interest in replicating it so I am putting together this guide and I hope people can enjoy their Clios for longer!
+
+If you have found this useful and enjoy project like this, please consider following Emanuel's adventures and supporting him on Instagram at [@emanuel_the_clio](https://www.instagram.com/emanuel_the_clio/)
+
+Good luck and happy building!
 
 ---
 
-**IMPORTANT**
+**DISCLAIMER**
 
 **To make this project work you will need to do some coding, wiring, plastic cutting (hopefully not for long). If you have absolutely no coding/tech experience I would advice against trying this. The good thing is that it is all reversible and non-destructive (except the screen housing) so if you were to not get it right, you can just plug back in your old factory screen.**
+
+# Table of Contents
+
+- [Parts List](#parts)
+  - [Software](#software)
+  - [Hardware](#hardware)
+- [Assembly](#assembly)
+  - [Installing OpenAuto Pro: Steps 1 to 3](#1-3)
+  - [Assembling Components: Steps 4-7](#4-7)
+  - [Dry Testing and Optional CarPlay: Steps 8-9](#8-9)
+  - [Setting Up CarPiHat: Steps 10-13](#10-13)
+  - [Wiring and Housing: Steps 14-15](#14-15)
+  - [Enabling Automation Services: Step 16](#16)
+  - [Enabling Bluetooth Audio: Steps 17-19](#17-19)
+- [Additional Notes](#notes)
+
+<a id="parts"></a>
 
 # Parts List
 
@@ -20,11 +41,15 @@ Here is a [list](https://docs.google.com/spreadsheets/d/1OFVzR3P-o9TuCRibHxrFXSt
 
 The software supports Android Auto out of the box. If you also want Apple Carplay you will need an additional adapter and a software plug-in to make it work.
 
+<a id="software"></a>
+
 ## Software
 
 - [OpenAuto Pro](https://bluewavestudio.io/shop/openauto-pro-car-head-unit-solution/) software license
 - [OpenAuto CarPlay Plugin](https://bluewavestudio.io/shop/plugin-carplay-autobox-for-openauto-pro/) [OPTIONAL]
 - [Renault Loading Screen](https://bluewavestudio.io/shop/splash-screens-package/) [OPTIONAL]
+
+<a id="hardware"></a>
 
 ## Hardware
 
@@ -42,15 +67,30 @@ The software supports Android Auto out of the box. If you also want Apple Carpla
 - Car Stereo Microphone [OPTIONAL]
 - Bluetooth 4.0 OBD2 ELM27 Adapter [OPTIONAL]
 
+<a id="assembly"></a>
+
 # Assembly
 
+<a id="1-3"></a>
+
 1. First we will need to burn and install the software onto our SD card. The [OpenAuto Forum](https://bluewavestudio.io/community/) is a great resource with a lots of guides on how to do mostly everything software related if you ever get lost. Before you start, go ahead and purchase an OpenAuto Pro License. It can take up to 12 hours for them to get back to you with your licensed file and activation key.
+
 2. Once you have received your file and activation key refer to [this](https://www.youtube.com/watch?v=fb5lxQvdhbI) video on how to flash the OpenAuto software to the Micro SD card. I used a free program called [Balena Etcher](https://etcher.balena.io/).
+
 3. Insert the flashed Micro SD card into the Raspberry Pi Micro SD slot
+
+<a id="4-7"></a>
+
 4. Install the Raspberry Pi to the back of the screen and connect the screen to the Pi using one of the provided ribbon cables. I secured the Pi to the screen with just two of the screws (top left and bottom right). I used the other two to secure the CarPiHAT to the Pi. Ideally you can use some long screws to screw in everything together if you can get a hold of those but this has worked just fine for me.
+
 5. Install the CarPiHAT on top of the Pi using the remaining two screws
+
 6. Plug in the USB Bluetooth Adapter and the USB Stereo Audio Card. I advise you to also get a USB wireless keyboard so that you can easily navigate the Pi and be able to troubleshoot things in the future while in the unit is installed in the car without taking it out. Also plug in the Carlinkit adapter if you are going to use CarPlay.
+
 7. At this point you can use a power bank or USB-C charger to give power to the Pi via the USB-C port. You should be taken to the OpenAuto Pro activation screen and follow the instructions on inputting your license key.
+
+<a id="8-9"></a>
+
 8. Once you are successfully loaded in the OpenAuto home screen, you can use a USB cable to connect your phone and test if either Android Auto or Apple Carplay works, depending on which one you want.
 
    - If you are planning to use Carplay, go to the CarPlay section in the Additional Notes at the bottom to read about the CarPlay Plug-in before you continue.
@@ -58,13 +98,20 @@ The software supports Android Auto out of the box. If you also want Apple Carpla
    - For Android Auto plug the cable directly into the Pi, for Carplay plug into the Carlinkit adapter if it enables wired connection (the CCPA from the Parts List does). Once plugged in the corresponding software should load up automatically which will confirm for you that all of your hardware peripherals are compatible with the OpenAuto Software.
 
 9. The next step is to enable wireless Android Auto and Apple Carplay. To do that you need to connect your phone to the Raspberry Pi via Bluetooth. You can do that my connecting your phone to the Open Auto using the **Telephone** -> **Add menu**. It will walk you through a user friendly setup procedure. Once your phone is connected, you should see a **Wi-Fi** button when you go into either Android Auto or Autobox (this is CarPlay) menus.
+
+<a id="10-13"></a>
+
 10. Now that you have made sure the base software works as expected and connects successfully, it is time to wire things into the car. What we want to achieve is for the unit to start up with ignition and then to gracefully shut down (not cut power and crash) when ignition is off. To achieve that, we will need to convert the car's 12V power down to 5V and have a relay that switches and runs a script that shuts down the unit when ignition is off. Fortunatelly, there is a great solution for exactly this application called [CarPiHAT](https://github.com/gecko242/CarPiHat/wiki). You can refer to the [Quick Start Guide](https://github.com/gecko242/CarPiHat/wiki/Quick-Start-Guide) if you get into trouble but I will describe the steps necessary to make this work below.
+
 11. We want to create a script that monitors a couple of GPIO pins on the Pi and manages power based on those inputs. There is a great explanation and examples of this in the CarPiHat Quick Start Guide. In order to do that we will have to get out of OpenAuto and go to the Raspberian OS. You can do that by clicking on the power button in OpenAuto towards the bottom and then click Return which will bring you do the OS. At this point you WILL require at least a keyboard connected. Press `Ctrl+Alt+T` to open up the terminal. I am assuming that you have a basic understanding of terminal commands if you are attempting this project. If you are struggling please refer to this [Quick Guide for the Command Line](https://raspberrypi-guide.github.io/programming/working-with-the-command-line).
+
 12. We are going to create a new python file called `carPiHat.py`
+
     1. `Ctrl+Alt+T`to get to the terminal. You should already be in the `/pi` folder, if not navigate to that using the `cd` and `ls` commands.
     2. Type in `sudo nano carPiHat.py` and press `Enter` to create a new file. This will bring up the nano file editor which we will use to create our script.
     3. Copy and paste the contents of the **carPiHat.py** file that is in the source code of this repository.
     4. To save press `Ctrl+X`, then `Y` to confirm, then `Enter` to exit back to the Terminal. You now have the script required to safely turn on and off the Pi with the car's ignition.
+
 13. We now need to create a service that will trigger this script. A service is a program that runs in the background without the need of user interaction. There is a great guide on how to do that [here](https://github.com/gecko242/CarPiHat/wiki/Safe-Shutdown-using-a-Service). I will run down through the commands below.
     1. Make the `carPiHat.py` script executable by running the following command in the Terminal and pressing `Enter`
        - `chmod +x /home/pi/carPiHat.py`
@@ -79,6 +126,8 @@ The software supports Android Auto out of the box. If you also want Apple Carpla
 Before you finish this setup and enable the service that you just created, you HAVE to wire up the Pi with the car's ignition and constant 12V power. After you enable the service and restart the Pi, you WILL NOT be able to run it and continue any further setup or troubleshooting using power through the USB-C port. I suggest you enable the service once you have power through the car to avoid any extra work (learned that from experience).
 
 ---
+
+<a id="14-15"></a>
 
 14. The [CarPiHat Quick Start Guide](https://github.com/gecko242/CarPiHat/wiki/Quick-Start-Guide) has a handy pinout diagram
     ![Alt text](https://github.com/gecko242/CarPiHat/raw/master/Datasheet_latest.png)
@@ -120,6 +169,8 @@ Before you finish this setup and enable the service that you just created, you H
 
 - Ideally it would be best if we can make a 3D scan of the original housing and create a 3D model that fits and clips all of the components perfectly while maintaining the factory look. I am working with somebody on creating that so follow this space! If you have experience in this kind of work and are willing to help please chime it too!
 
+<a id="16"></a>
+
 16. We are now ready to go to the car and finish the installation. Connect the unit to the car's radio display loom and turn on ignition. The unit should start and bring you to the OpenAuto home screen. We need to finish enabling the service that we created earlier. To do that, exit OpenAuto and open a Terminal window. Type in the following commands, pressing `Enter` after each one to execute
 
     - `sudo systemctl deamon-reload`
@@ -128,6 +179,8 @@ Before you finish this setup and enable the service that you just created, you H
     - `sudo systemctl status carpihat.service`
 
     Restart the Pi to test the service. You can do that by executing `sudo reboot` in the terminal. When the Pi reboots, turn off ignition and open the driver's side door to cut all power. The Pi should "gracefully" shut down after 10 seconds.
+
+<a id="17-19"></a>
 
 17. The last thing to do is connect the Pi to the factory radio's Bluetooth so that it can stream audio through the speakers. What I have done works for the Update List Renault radios. I purchased a Renault Bluetooth AUX adapter which connects to the back of the radio through two ISO connectors(the green and blue ones on the right) as follows:
 
@@ -155,6 +208,10 @@ Before you finish this setup and enable the service that you just created, you H
 20. You have done it! Try rebooting the Pi and make sure that the Bluetooth radio connects on boot automatically.
 
 21. Install the unit with in the designated spot. Everything just clips in place, first the front part followed by the rear cover.
+
+![Clio MK3 Head Unit](/assets/images/headunit.JPG)
+
+<a id="notes"></a>
 
 # Additional Notes
 
