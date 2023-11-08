@@ -8,7 +8,7 @@ I love my Clio 197, aka [Emanuel the Clio](https://www.instagram.com/emanuel_the
 
 In this spirit, I decided to try and repurpose the original TomTom navigation housing and update its internals with modern components. Thus this project was born. A lot of people have shown interest in replicating it so I am putting together this guide and I hope people can enjoy their Clios for longer!
 
-If you have found this useful and enjoy project like this, please consider following Emanuel's adventures and supporting him on Instagram at [@emanuel_the_clio](https://www.instagram.com/emanuel_the_clio/)
+If you have found this useful and enjoy project like this, please consider following Emanuel's adventures and supporting him on Instagram at [@emanuel_the_clio](https://www.instagram.com/emanuel_the_clio/). Don't forget to tag him and share your build progress!
 
 Good luck and happy building!
 
