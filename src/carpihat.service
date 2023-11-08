@@ -1,0 +1,10 @@
+[Unit]
+Description=CarPiHat initialisation
+
+[Service]
+Type=simple
+
+ExecStart=/usr/bin/python3 /home/pi/carPiHat.py
+
+[Install]
+WantedBy=multi-user.target
