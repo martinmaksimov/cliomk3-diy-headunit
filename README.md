@@ -1,10 +1,8 @@
-# DIY Clio Mk3 Raspberry Pi Head Unit
-
 <p align="center">
   <img src="assets/images/emanuel.svg" />
 </p>
 
-### DIY head unit for Clio MK3 enabling Android Auto, Apple Carplay, and other mods.
+### DIY head unit for Clio Mk3 enabling Android Auto, Apple Carplay, and other mods.
 
 I love my Clio 197, aka [Emanuel the Clio](https://www.instagram.com/emanuel_the_clio/), but it is lacking in some creature comforts like navigation and a decent way to stream and control music. I really did not want to buy one of those big aftermarket touchsreen units and have always tried to keep all of the modifications on my car sort of OEM+.
 
