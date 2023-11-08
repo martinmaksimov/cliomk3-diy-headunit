@@ -23,6 +23,7 @@ Good luck and happy building!
 - [Parts List](#parts)
   - [Software](#software)
   - [Hardware](#hardware)
+  - [Tools](#tools)
 - [Assembly](#assembly)
   - [Installing OpenAuto Pro: Steps 1 to 3](#1-3)
   - [Assembling Components: Steps 4-7](#4-7)
@@ -37,9 +38,13 @@ Good luck and happy building!
 
 # Parts List
 
-Here is a [list](https://docs.google.com/spreadsheets/d/1OFVzR3P-o9TuCRibHxrFXSt-syTtQHrRWYO4-cv3wwE/edit?usp=sharing) of the hardware and software components that you will need to make this work. The build revolves around a piece of software called [OpenAuto](https://bluewavestudio.io/). I have used the Pro paid version since it allows a lot of freedom and the add-ons that I need to make everything work. Using the free open-source version might also work but the price is really not high so I decided to go with the Pro version.
+The build revolves around a piece of software called [OpenAuto](https://bluewavestudio.io/). I have used the Pro paid version since it allows a lot of freedom and the add-ons that I need to make everything work. Using the free open-source version might also work but the price is really not high so I decided to go with the Pro version.
 
 The software supports Android Auto out of the box. If you also want Apple Carplay you will need an additional adapter and a software plug-in to make it work.
+
+**DISCLAIMER**
+
+**This is an open-source project and a lot of effort has been put to making this available to everyone for free. Some of the links in the Parts List below are affiliate links. They do not change the cost for you but clicking on them and purchasing the item in that manner will support the project and its future development. Thank you for the support!**
 
 <a id="software"></a>
 
@@ -53,19 +58,28 @@ The software supports Android Auto out of the box. If you also want Apple Carpla
 
 ## Hardware
 
-- Raspberry Pi 4 Model B 4Gb
-- CarPiHAT
-- 32Gb MicroSD Card
-- 7 Inch Touch Screen Monitor for Raspberry Pi
-- External Stereo Sound Card
-- Bluetooth 4.0 USB Adapter
-- RN-C24 24-pin Adapter
-- Renault Car Stereo Bluetooth Adapter
-- Clio Mk3 TomTom SatNav Housing
-- Carlinkit CCPA Adapter [OPTIONAL]
-- Renault Car Stereo Aux In [OPTIONAL]
-- Car Stereo Microphone [OPTIONAL]
-- Bluetooth 4.0 OBD2 ELM27 Adapter [OPTIONAL]
+- [Raspberry Pi 4 Model B 4Gb](https://amzn.to/47HWIYH)
+- [CarPiHat](https://thepihut.com/products/carpihat-car-interface-hat-for-raspberry-pi?variant=41600908492995)
+- [32Gb MicroSD Card](https://amzn.to/460NxBj)
+- [7 Inch Touch Screen Monitor for Raspberry Pi](https://amzn.to/3FXschf)
+- [External Stereo Sound Card](https://amzn.to/471crCb)
+- [Bluetooth 4.0 USB Adapter](https://amzn.to/3QQKFlZ)
+- [RN-C24 24-pin Adapter](https://amzn.to/3Su6EAB)
+- [Renault Car Stereo Bluetooth Adapter](https://amzn.to/3Qu7pqv)
+- [Clio Mk3 TomTom SatNav Housing](https://www.ebay.co.uk/itm/194181732840)
+- [Carlinkit CCPA Adapter](https://amzn.to/3ss2WwG) [OPTIONAL]
+- [Renault Car Stereo Aux In](https://amzn.to/49rOWn8) [OPTIONAL]
+- [Car Stereo Microphone](https://amzn.to/49mFXUx) [OPTIONAL]
+- [Bluetooth 4.0 OBD2 ELM327 Adapter](https://amzn.to/49uw1s4) [OPTIONAL]
+
+<a id="tools"></a>
+
+## Tools
+
+- [Cable Crimping Tool Set](https://amzn.to/3Qxden3)
+- [Digital Multimeter](https://amzn.to/3FPoBBR) [OPTIONAL]
+
+Here is a [list](https://docs.google.com/spreadsheets/d/1OFVzR3P-o9TuCRibHxrFXSt-syTtQHrRWYO4-cv3wwE/edit?usp=sharing) of the hardware and software components in a tabular form. There is some additional information and notes for each item as well if you are interested.
 
 <a id="assembly"></a>
 
