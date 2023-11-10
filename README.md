@@ -50,7 +50,8 @@ The software supports Android Auto out of the box. If you also want Apple Carpla
 
 ## Software
 
-- [OpenAuto Pro](https://bluewavestudio.io/shop/openauto-pro-car-head-unit-solution/) software license
+- Use code `emanuel_the_clio_oap` to get 5% off courtesy of the OpenAuto Team
+- [OpenAuto Pro](https://bluewavestudio.io/shop/openauto-pro-car-head-unit-solution/)
 - [OpenAuto CarPlay Plugin](https://bluewavestudio.io/shop/plugin-carplay-autobox-for-openauto-pro/) [OPTIONAL]
 - [Renault Loading Screen](https://bluewavestudio.io/shop/splash-screens-package/) [OPTIONAL]
 
