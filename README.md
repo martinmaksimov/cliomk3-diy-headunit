@@ -234,6 +234,8 @@ Before you finish this setup and enable the service that you just created, you H
 
 CarPlay requires an additional dongle and an additional software plug-in for OpenAuto Pro. Once you have purchased and receive the license, the email will have instructions for how to install it. You will require to connect the Pi to Wi-Fi and run a command in the Terminal which will download the plug-in. Then you will be able to activate it with the attached license key inside OpenAuto.
 
+**NOTE**: Depending on your dongle firmware version you might need to downgrade the firmware to make the dongle work. If you have everything plugged in but clicking the Wi-Fi button on the Autobox does nothing this might be the case for you. Follow [this](https://bluewavestudio.io/community/thread-3936.html?highlight=carlinkit+firmware) link to a Bluewave Forum post that talks about this and goes over how to downgrade the firmware of the donlge.
+
 ### Renault Loading Screen
 
 This is not necessary but it is a very nice addition to make the entire experience OEM. Again it is a small plug-in that give you a Renault badge overlay while the system is booting - a nice touch. The setup is similar to the CarPlay plug-in and comes with detailed instructions in an email.
